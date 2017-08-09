@@ -59,18 +59,19 @@ var orm = {
       }
       cb(result);
     });
-  },
-  deleteOne: function(table, condition, cb) {
-    var queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-      cb(result);
-    });
   }
+  // ,
+  // deleteOne: function(table, condition, cb) {
+  //   var queryString = "DELETE FROM " + table;
+  //   queryString += " WHERE ";
+  //   queryString += condition;
+  //   connection.query(queryString, function(err, result) {
+  //     if (err) {
+  //       throw err;
+  //     }
+  //     cb(result);
+  //   });
+  // }
 };
 // Export the orm object for the model (cat.js).
 module.exports = orm;
